@@ -34,7 +34,9 @@ RSpec.describe Project do
     end
 
     it 'calculate total tasks' do
-      expect(project.total_size).to eq(10)
+      # expect(project.total_size).to eq(10)
+      expect(project).to be_of_size(10)
+      expect(project).not_to be_of_size(5)
     end
 
     it 'calculate remaining size' do
